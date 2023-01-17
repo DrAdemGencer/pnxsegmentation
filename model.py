@@ -194,3 +194,12 @@ results = model.evaluate(x_test, y_test, batch_size=128)
 print("Metric Results:", results)
 
 print("Evaluation completed!")
+
+# Predict model
+predictions = model.predict(x=x_test, verbose=1)
+
+# Save predictions
+np.save(predictions_path, predictions)
+
+# LOG
+print("Prediction completed!")
